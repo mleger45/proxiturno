@@ -29,7 +29,6 @@ jobs:
     # Here we're making sure we use just use the system-wide pip. By default it uses the project root's requirements.txt.
     # Then run your tests!
     # CircleCI will report the results back to your VCS provider.
-    working_directory: ~/proxiturno/backend
     steps:
       - checkout
       - python/install-packages:
@@ -39,4 +38,4 @@ jobs:
       - run:
           name: Run tests
           # This assumes pytest is installed via the install-package step above
-          command: python manage.py test
+          command: python backend/manage.py test
